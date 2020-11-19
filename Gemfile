@@ -20,7 +20,14 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
+# Compile Optimization
+gem 'autoprefixer-rails'
+# Fontawsome - Fonts and Icons
+gem 'font-awesome-sass', '~> 5.12.0'
+# Form helper
+gem 'simple_form'
 # gem 'bcrypt', '~> 3.1.7'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
