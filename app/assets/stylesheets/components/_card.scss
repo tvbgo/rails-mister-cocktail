@@ -1,0 +1,35 @@
+.card-columns {
+  width: 80%;
+  margin: 0 auto;
+}
+.card {
+  background-color: $light-transparent;
+  margin: 2px;
+  .card-title {
+    color: black;
+  }
+
+}
+.cocktail-card {
+  height: 500px;
+  box-shadow: 2px 2px 2px 2px $gray, 4px 4px 4px 4px $gray;
+  width: 80%;
+  margin: 50px auto;
+  background-color: $light-transparent;
+
+  .cocktail-img {
+    text-align: center;
+
+    height: 100%;
+    width: 45%;
+
+    img {
+      height: 80%;
+      width: 100%;
+    }
+  }
+}
+.ingredients-card {
+
+  width: 50%;
+}

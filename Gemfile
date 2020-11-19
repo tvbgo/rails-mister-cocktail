@@ -26,9 +26,10 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 # Form helper
 gem 'simple_form'
+# Faker for realistic seeding
+gem 'faker'
+
 # gem 'bcrypt', '~> 3.1.7'
-
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
