@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   resources :cocktails do
     resources :ingredients, only: %i[index edit]
-    resources :doses, only: %i[index edit]
+    resources :doses, only: %i[index edit new create]
   end
 end
