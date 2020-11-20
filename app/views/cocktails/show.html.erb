@@ -18,7 +18,7 @@
 
 
       <div class="cocktail-img">
-        <img src="https://loremflickr.com/320/240/" alt="">
+        <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
         <h1><%= @cocktail.name %></h1>
       </div>
 

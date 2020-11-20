@@ -16,13 +16,12 @@
 <div class="card-columns">
     <% @cocktails.each do |cocktail| %>
         <div class="card ">
-          <%= image_tag("https://loremflickr.com/320/240/#{cocktail.name}", class: "card-img-top") %>
+          <%= cl_image_tag cocktail.photo.key, crop: :fill, class: "card-img-top" %>>
           <%=link_to "#{cocktail.name}", cocktail_path(cocktail), class: "card-title p-3" %>
           <div class="card-body text-right">
               <%= link_to 'Remove', cocktail_path(cocktail), class: "btn btn-danger card-link w-50", method: "delete", data: { confirm: "Are you sure you want to delete #{cocktail.name}?"} %>
           </div>
         </div>
-
     <% end %>
 </div>
 

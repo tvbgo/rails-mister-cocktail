@@ -2,10 +2,16 @@
 
 <div class="form-container cocktail-card">
   <%= simple_form_for(@cocktail) do |f| %>
-    <div class="form-input">
-      <%= f.label "What is the name of the Cocktail?" %>
-      <%= f.input :name %>
-      <%= f.submit "Create the cocktail" %>
+    <div class="form">
+      <div class="form-input">
+        <%= f.label "Write a name for your cocktail and add a picture" %>
+        <%= f.input :name, label: false %>
+
+        <%= f.input :photo, as: :file, label: false %>
+      </div>
+      <div class="form-action">
+        <%= f.submit "Create the cocktail" %>
+      </div>
     </div>
   <% end %>
 </div>
