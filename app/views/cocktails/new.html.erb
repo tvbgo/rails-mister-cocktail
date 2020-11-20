@@ -1,1 +1,11 @@
-new.html.erb
+
+
+<div class="form-container cocktail-card">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <div class="form-input">
+      <%= f.label "What is the name of the Cocktail?" %>
+      <%= f.input :name %>
+      <%= f.submit "Create the cocktail" %>
+    </div>
+  <% end %>
+</div>

@@ -1,1 +1,10 @@
-new.html.erb
+
+<div class="form-container cocktail-card">
+  <%= simple_form_for([@cocktail, @dose], method: "post") do |f| %>
+    <%= f.label "Dose description:" %>
+    <%= f.input :description %>
+    <%= f.label "Choose and ingredient:" %>
+    <%= f.association :ingredient, collection: @ingredients %>
+    <%= f.submit "+ Add dose" %>
+  <% end %>
+  </div>
