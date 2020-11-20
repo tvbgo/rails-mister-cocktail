@@ -1,15 +1,15 @@
 
 <div class="form-container cocktail-card">
   <div class="form-input">
-    <%= simple_form_for([@cocktail, @dose], method: "post") do |f| %>
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
       <%= f.label "Dose description:" %>
       <%= f.input :description, label: false%>
       <%= f.label "Choose an ingredient:" %>
-      <%= f.association :ingredient, collection: @ingredients, label: false, input_html: {multiple: true} %>
-  </div>
-  <div class="form-action">
-    <%= f.submit "+ Add dose" %>
+      <%= f.association :ingredient, collection: @ingredients, label: false %>
+    <div class="form-action ">
+      <%= f.submit "+ Add", class: "btn btn-primary " %>
+    </div>
   </div>
   <% end %>
-  <%= link_to 'Back', cocktail_path(@cocktail), class: "btn btn-primary" %>
+  <%= link_to 'Back', cocktail_path(@cocktail), class: "btn btn-primary " %>
   </div>
