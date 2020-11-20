@@ -6,7 +6,7 @@
       <%= link_to 'Dicover a new Cocktail', cocktail_path(rand(1..10)), class: 'btn btn-outline-success' %>
     </div>
     <h3>Mr. Cocktail</h3>
-    <form class="form-inline">
+    <form class="form-inline" action="/cocktails" target="_blank">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
     </form>
