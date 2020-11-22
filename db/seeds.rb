@@ -6,39 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require 'open-uri'
 
 puts 'Droping database...'
 Cocktail.destroy_all
+Ingredient.destroy_all
+Dose.destroy_all
 
-puts 'Creating new cocktails...'
-20.times do
-  ingredient = Ingredient.create(
-    {
-      name: Faker::Food.ingredient
-
-    }
-  )
-  puts "Added #{ingredient.name}"
+puts 'Creating new cocktail ingredients...'
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+url_file = open(url).read
+@ingredients = JSON.parse(url_file)
+@ingredients["drinks"].each do |ingredient|
+  new_ingredient = Ingredient.create(name: ingredient["strIngredient1"])
+  puts "Created #{new_ingredient.name}"
 end
 
-10.times do
-  cocktail = Cocktail.create(
-    {
-      name: Faker::FunnyName.three_word_name
-
-    }
-  )
-  puts "Created #{cocktail.name}"
-end
-
-10.times do
-  dose = Dose.create(
-    {
-      description: Faker::Food.measurement,
-      cocktail_id: rand(1..10),
-      ingredient_id: rand(1..20)
-
-    }
-  )
-  puts "Added #{dose.description}"
-end
