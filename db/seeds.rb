@@ -12,7 +12,6 @@ Cocktail.destroy_all
 Ingredient.destroy_all
 Dose.destroy_all
 
-puts 'Creating new cocktail ingredients...'
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 url_file = open(url).read
 @ingredients = JSON.parse(url_file)
@@ -33,16 +32,14 @@ end
     }
   )
   cocktail.photo.attach(io: file, filename: 'new.jpg', content_type: 'image/jpg')
-  puts "created #{cocktail.name}"
 end
 
 60.times do
-  dose = Dose.create(
+  Dose.create(
     {
       description: Faker::Food.measurement,
       cocktail_id: rand(1..15),
       ingredient_id: rand(1..100)
     }
   )
-  puts "Added #{dose.description} of #{dose.ingredient[:name]} to #{dose.cocktail[:name]}"
 end
