@@ -3,8 +3,9 @@
   margin: 0 auto;
 }
 .card {
-  background-color: $light-transparent;
+  background-color: white;
   margin: 2px;
+  text-align: center;
   .card-title {
     color: black;
   }
@@ -15,12 +16,13 @@
   box-shadow: 2px 2px 2px 2px $gray, 4px 4px 4px 4px $gray;
   width: 80%;
   margin: 50px auto;
-  background-color: $light-transparent;
-
+  background-color: white;
+  text-align: center;
   .cocktail-img {
     text-align: center;
-    height: 100%;
-    width: 45%;
+    height: 80%;
+    width: 35%;
+    border: 5px solid white;
     }
   }
 
@@ -52,4 +54,9 @@
     }
 
   }
+}
+
+.card-img-top {
+  border: 15px solid white;
+  width: 85%;
 }
